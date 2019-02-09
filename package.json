@@ -1,0 +1,27 @@
+{
+  "name": "code-spots",
+  "version": "1.0.0",
+  "description": "An app that helps developers find spots to code.",
+  "author": "AndrewZamora",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "test": "jest"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "nuxt": "^2.4.0"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.27",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "dotenv": "^6.2.0",
+    "jest": "^23.6.0",
+    "nodemon": "^1.18.9",
+    "vue-jest": "^3.0.2"
+  }
+}
