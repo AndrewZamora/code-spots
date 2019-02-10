@@ -22,22 +22,6 @@ export default {
     hereMapId: process.env.hereMapAppId,
     hereMapCode: process.env.hereMapAppCode
   }),
-  head() {
-    return {
-      script: [
-        {
-          src: "https://js.api.here.com/v3/3.0/mapsjs-core.js",
-          body: true,
-          defer: true
-        },
-        {
-          src: "https://js.api.here.com/v3/3.0/mapsjs-service.js",
-          body: true,
-          defer: true
-        }
-      ]
-    };
-  }
 };
 </script>
 
