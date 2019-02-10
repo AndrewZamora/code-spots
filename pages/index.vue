@@ -1,14 +1,25 @@
 <template>
   <section class="container">
-    <h1>Code Spots!</h1>
-    <HereMap
-      :appId="hereMapId"
-      :appCode="hereMapCode"
-      lat="37.7397"
-      lng="-121.4252"
-      width="100%"
-      height="835px"
-    />
+    <header>
+      <h1>Code Spots!</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="http://" target="_blank" rel="noopener noreferrer">show something</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="map-area">
+      <HereMap
+        :appId="hereMapId"
+        :appCode="hereMapCode"
+        lat="34.6937"
+        lng="135.5022"
+        width="100%"
+        height="800px"
+      />
+    </div>
   </section>
 </template>
 
@@ -21,9 +32,15 @@ export default {
   data: () => ({
     hereMapId: process.env.hereMapAppId,
     hereMapCode: process.env.hereMapAppCode
-  }),
+  })
 };
 </script>
 
-<style>
+<style lang="scss">
+.container {
+  display: flex;
+}
+.map-area {
+  flex: 2;
+}
 </style>

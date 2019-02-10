@@ -42,6 +42,6 @@ export default {
 
 <style scoped>
 .here-map {
-    background: green;
+    background:#cccccc;
 }
 </style>
