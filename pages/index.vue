@@ -29,10 +29,12 @@ export default {
   components: {
     HereMap
   },
-  data: () => ({
-    hereMapId: process.env.hereMapAppId,
-    hereMapCode: process.env.hereMapAppCode
-  })
+  data: function() {
+    return {
+      hereMapId: process.env.hereMapAppId,
+      hereMapCode: process.env.hereMapAppCode
+    };
+  }
 };
 </script>
 
