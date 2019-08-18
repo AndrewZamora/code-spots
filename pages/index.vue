@@ -17,7 +17,7 @@
         lat="34.6937"
         lng="135.5022"
         width="100%"
-        height="800px"
+        height="100vh"
       />
     </div>
   </section>

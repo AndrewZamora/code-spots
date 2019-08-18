@@ -1,4 +1,4 @@
-if (process.env.NODE_ENV !== 'production') require('dotenv').config()
+// if (process.env.NODE_ENV !== 'production') require('dotenv').config()
 const pkg = require('./package')
 
 
@@ -46,8 +46,9 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/dotenv',
   ],
-
+  
   /*
   ** Build configuration
   */
@@ -58,10 +59,5 @@ module.exports = {
     extend(config, ctx) {
 
     }
-  },
-
-  env: {
-    hereMapAppId: process.env.HERE_MAP_APP_ID,
-    hereMapAppCode: process.env.HERE_MAP_APP_CODE
   }
 }

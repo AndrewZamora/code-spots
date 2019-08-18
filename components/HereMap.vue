@@ -1,6 +1,6 @@
 <template>
   <div class="here-map">
-    <div ref="map" v-bind:style="{ width: width, height: height }"></div>
+    <div ref="map" :style="{ width: width, height: height }"></div>
   </div>
 </template>
 
@@ -21,20 +21,21 @@ export default {
     height: String
   },
   created() {
-      if (process.browser) {
-       this.platform = new H.service.Platform({
-        "app_id": this.appId,
-        "app_code": this.appCode
-    });}
+    if (process.browser) {
+      this.platform = new H.service.Platform({
+        app_id: this.appId,
+        app_code: this.appCode
+      });
+    }
   },
   mounted() {
-      this.map = new H.Map(
-        this.$refs.map,
-        this.platform.createDefaultLayers().normal.map,
-        {
-            zoom: 10,
-            center: { lng: this.lng, lat: this.lat }
-        }
+    this.map = new H.Map(
+      this.$refs.map,
+      this.platform.createDefaultLayers().normal.map,
+      {
+        zoom: 10,
+        center: { lng: this.lng, lat: this.lat }
+      }
     );
   }
 };
@@ -42,6 +43,6 @@ export default {
 
 <style scoped>
 .here-map {
-    background:#cccccc;
+  background: #cccccc;
 }
 </style>
