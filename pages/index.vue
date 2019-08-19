@@ -1,8 +1,8 @@
 <template>
   <section class="container">
-    <header>
-      <h1>Code Spots!</h1>
-      <nav>
+    <header class="header">
+      <h1>Code Spots</h1>
+      <nav class="navbar">
         <ul>
           <li>
             <a href="http://" target="_blank" rel="noopener noreferrer">show something</a>
@@ -42,7 +42,18 @@ export default {
 .container {
   display: flex;
 }
+.header {
+  flex:1;
+}
+.header h1 {
+  text-align: center;
+  padding: 1em;
+}
+.navbar {
+  display: flex;
+  flex-direction: column;
+}
 .map-area {
-  flex: 2;
+  flex: 4;
 }
 </style>
