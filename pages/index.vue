@@ -14,6 +14,7 @@
       <HereMap
         :appId="hereMapId"
         :appCode="hereMapCode"
+        type="terrain"
         lat="34.6937"
         lng="135.5022"
         width="100%"

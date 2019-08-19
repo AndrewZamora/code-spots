@@ -18,7 +18,8 @@ export default {
     lat: String,
     lng: String,
     width: String,
-    height: String
+    height: String,
+    type: String
   },
   created() {
     if (process.browser) {
@@ -31,7 +32,7 @@ export default {
   mounted() {
     this.map = new H.Map(
       this.$refs.map,
-      this.platform.createDefaultLayers().normal.map,
+      this.platform.createDefaultLayers()[this.type].map,
       {
         zoom: 10,
         center: { lng: this.lng, lat: this.lat }
