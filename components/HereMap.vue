@@ -66,17 +66,11 @@ export default {
       // Add event listeners:
       const that = this;
       this.map.addEventListener("tap", function(evt) {
-        // Log 'tap' and 'mouse' events:
-        // const target = evt.target;
-        // const viewportX = evt.currentPointer.viewportX;
-        // const viewportY = evt.currentPointer.viewportY;
-        // console.log(viewportX - target['offset'].x, viewportY - target['offset'].y)
-        // console.log(evt.type, evt.currentPointer.type);
         var coord = that.map.screenToGeo(
           evt.currentPointer.viewportX,
           evt.currentPointer.viewportY
         );
-        console.log(coord.lat, coord.lng);
+        console.log(`LAT:${coord.lat}`, `LNG:${coord.lng}`);
       });
     }
   }
