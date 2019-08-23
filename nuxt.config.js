@@ -21,7 +21,8 @@ module.exports = {
     ],
     script: [
       { src: 'https://js.api.here.com/v3/3.0/mapsjs-core.js' },
-      { src: 'https://js.api.here.com/v3/3.0/mapsjs-service.js' }
+      { src: 'https://js.api.here.com/v3/3.0/mapsjs-service.js' },
+      { src: 'https://js.api.here.com/v3/3.0/mapsjs-mapevents.js'},
     ],
   },
 
