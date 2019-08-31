@@ -30,11 +30,28 @@ export default {
   components: {
     HereMap
   },
+  mounted() {
+    this.getUserLocation();
+  },
   data: function() {
     return {
       hereMapId: process.env.hereMapAppId,
-      hereMapCode: process.env.hereMapAppCode
+      hereMapCode: process.env.hereMapAppCode,
+      userLocation: null
     };
+  },
+  methods: {
+    getUserLocation: function() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(position => {
+          const lat = position.coords.latitude;
+          const lng = position.coords.longitude;
+          console.log(lat, lng);
+        });
+      } else {
+        alert("Geolocation is not supported by this browser.");
+      }
+    }
   }
 };
 </script>
@@ -44,7 +61,7 @@ export default {
   display: flex;
 }
 .header {
-  flex:1;
+  flex: 1;
 }
 .header h1 {
   text-align: center;
